@@ -275,13 +275,13 @@ As always our first step will be to take in any needed inputs. Then we can run t
 
     b. If count is evenly divisible by 3, return "Fizz"
 
-    c. If count is evenlyndivisible by 5, return "Buzz"
+    c. If count is evenly divisible by 5, return "Buzz"
 
     d. Else return count
 
 Remember, that our instructions must be as simple as possible. Meaning that each time we go through the loop, we will only pass one of the tests, and if we do, we are done with that turn in the loop. If that is the case, this algorithm will only work because it is written in this particular order.
 
-With the steps written in this order, we will test each number to see if it is evenly divisible by 3 and 5. If it is, we will return "FizzBuzz". If not, we will then test if the number is evenly divisible by 3. If so, we will return "Fizz". If not, we will test to see if the number is evenly divisible by 5. If so, we will return "Buzz". Then if the number is not evenly divisble by either 3 or 5, we will return the number.
+With the steps written in this order, we will test each number to see if it is evenly divisible by 3 and 5. If it is, we will return "FizzBuzz". If not, we will then test if the number is evenly divisible by 3. If so, we will return "Fizz". If not, we will test to see if the number is evenly divisible by 5. If so, we will return "Buzz". Then if the number is not evenly divisible by either 3 or 5, we will return the number.
 
 If we had instead written the step in 3a after b and c in the order of tests, we never would have gotten to it because we would have passed one of those tests first and ended that turn in the loop. So we would have seen "Fizz" for all numbers only divisible by 3, as well as numbers divisible by 3 and 5 because we would pass the first test for numbers divisible by 3. We would then see "Buzz" for all numbers only divisible by 5, and of course all remaining numbers would just be returned. Without us ever hitting the test for numbers divisible by 3 and 5, we would never see "FizzBuzz".
 
@@ -313,7 +313,7 @@ Write a function that will return all numbers from 1 to some number.
 ```Pseudocode
 function(num1) {
   for(count = 1; count <= 1; count = count + 1) {
-    each time return count;
+    return count;
   }
 }
 ```
@@ -323,7 +323,9 @@ Write a function that will return all even numbers from 1 to some number.
 ```Pseudocode
 function(num1) {
   for(count = 1; count <= 1; count = count + 1) {
-    If count is divisible by 2, return count.
+    If count is evenly divisible by 2 {
+      return count
+    }
   }
 }
 ```
@@ -335,9 +337,9 @@ Write an algorithm that will return "Fizz" if a number is divisible by 3, "Buzz"
 ```Pseudocode
 function(num1) {
   for(count = 1; count<= 1; count = count + 1) {
-    If count is divisible by 3 and 5 return "FizzBuzz"
-    Else if count is divisible by 3 return "Fizz"
-    Else if count is divisbe by 5 return "Buzz"
+    If count is evenly divisible by 3 and 5 return "FizzBuzz"
+    Else if count is evenly divisible by 3 return "Fizz"
+    Else if count is evenly divisible by 5 return "Buzz"
     Else return count
   }
 }
