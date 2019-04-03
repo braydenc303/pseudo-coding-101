@@ -78,6 +78,8 @@ We should first begin by discussing how we might interpret spoken or written ins
       - during
       - cycle
       - array
+      - repeat
+      -  continue
 
     - if/else statements
       - if (not)
@@ -312,7 +314,7 @@ Write a function that will return all numbers from 1 to some number.
 
 ```Pseudocode
 function(num1) {
-  for(count = 1; count <= 1; count = count + 1) {
+  for(count = 1; count <= num1; count = count + 1) {
     return count;
   }
 }
@@ -322,7 +324,7 @@ Write a function that will return all even numbers from 1 to some number.
 
 ```Pseudocode
 function(num1) {
-  for(count = 1; count <= 1; count = count + 1) {
+  for(count = 1; count <= num1; count = count + 1) {
     If count is evenly divisible by 2 {
       return count
     }
@@ -336,7 +338,7 @@ Write an algorithm that will return "Fizz" if a number is divisible by 3, "Buzz"
 
 ```Pseudocode
 function(num1) {
-  for(count = 1; count<= 1; count = count + 1) {
+  for(count = 1; count<= num1; count = count + 1) {
     If count is evenly divisible by 3 and 5 return "FizzBuzz"
     Else if count is evenly divisible by 3 return "Fizz"
     Else if count is evenly divisible by 5 return "Buzz"
